@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Pine Lake Resort</title>
+	<link rel="stylesheet" type="text/css" href="resort.css">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1><a href="index.html"> Pine Lake Resort</a></h1>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="index.html"> Home</a></li>
+			<li><a href="cabin.html"> Cabins</a></li>
+			<li><a href="dining.html"> Dining</a></li>
+			<li><a href="spa.html"> Spa</a></li>
+			<li><a href="wedding.html">Wedding</a></li>
+			<li><a href="activities.html"> Activities</a></li>
+			<li><a href="reservations.html"> Reservations</a></li>	
+		</ul>
+	</nav>
+	
+
+  <!-- Full-width images with number and caption text -->
+  <div>
+      
+    <img class="mainpic" src="image/hotel.jpg" alt="Resort picture" style="width:100%" >
+
+   
+  </div>
+
+	
+<main>
+    <div class="pictext">
+    	<h2>Reservation at Pine Lake Resort</h2>
+		<h3>Contact us today</h3>
+		<p class="field">Required field are marked with a asterisk *</p>
+		<form action="form.php" method="post">
+			<label for="myfname">*First name:</label>
+			<input type="text" name="FirstName" id="myfname" required="required">
+
+			<label for="mylname">*Last name:</label>
+			<input type="text" name="LastName" id="mylname" required="required">
+		
+		
+			<label for="myemail">*Email:</label>
+			<input type="email" name="Email" id="myemail" required="required">
+
+			<label for="myphone">Phone:</label>
+			<input type="tel" name="Phone" id="myphone" maxlength="12">
+
+			<label for="myarrival">Arrival date:</label>
+			<input type="date" name="Arrival" id="myarrival">
+
+			<label for="mynights">Nights:</label>
+			<input type="number" name="Nights" id="mynights" min=1 max="14">
+
+			<label for="mycomments">*Comments</label>
+			<textarea name="Comments" id="mycomments" cols="30" rows="2" required="required">
+			
+			</textarea>
+
+        	<input class="order" type="submit" value="Submit">
+   
+
+		</form>
+	</div>
+</main>
+	<footer>
+		<p>9772 Pine Ridge Road, PineLake,CO<br>
+			Email: <a href="mailto:Info@pineridge.com">Info@pineridge.com</a><br>
+			Call Us: <a href="888-259-5959">888-259-5959</a></p>
+
+		<p>Copyright &copy; 2020 Pine Lake Resort<br>
+	Gregory Saysset</p>
+	</footer>
+</body>
+
+</html>

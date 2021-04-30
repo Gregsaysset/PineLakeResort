@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Pine Lake Resort</title>
+	<link rel="stylesheet" type="text/css" href="resort.css">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1><a href="index.html"> Pine Lake Resort</a></h1>
+	</header>
+<!-- menu bar-->
+	<nav>
+		<ul>
+			<li><a href="index.html"> Home</a></li>
+			<li><a href="cabin.html"> Cabins</a></li>
+			<li><a href="dining.html"> Dining</a></li>
+			<li><a href="spa.html"> Spa</a></li>
+			<li><a href="wedding.html">Wedding</a></li>
+			<li><a href="activities.html"> Activities</a></li>
+			<li><a href="reservations.html"> Reservations</a></li>
+		</ul>
+	</nav>
+	<!-- slide show-->
+	<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img class="mainpic" src="image/lake2.jpg" alt="lake view"  style="width:100%">
+   
+  </div>
+
+  <div class="mySlides fade">
+    <img class="mainpic" src="image/hotel2.jpg" alt="hotel view" style="width:100%">
+
+  </div>
+
+  <div class="mySlides fade">
+    <img class="mainpic" src="image/pool.jpg" alt="pool view" style="width:100%" >
+    
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+	<div class="wrapper">
+	<main>
+		<!-- info box-->
+		<div class="pictext"  >
+
+		<img class="pic1" src="image/couple.jpeg" alt="couple at sunset">
+		<h2>Romantic Time</h2>
+
+		<p>Adventure and romance come together at Pine Lake Resort! We invite you to fall in love with Pine Lake 
+		   as you celebrate your love for each other. We offer romantic Packages, perfect for celebrating your honeymoon,
+		   anniversary or simply a romantic week end. Couples will appreciate a very private vacation. With multiple 
+		   Packages, there's truly something for every couple.
+		</p>
+
+		</div>
+		<div class="pictext" >
+		<img class="pic2" src="image/family.jpg" alt="family on dock">
+		<h2>Family Time</h2>
+		<p> Whether your family is looking for an action-packed vacation, a relaxing getaway or simply to spend some 
+			quality time together. Pine Lake Resort offer amazing family activities, from kayaking on the lake, fishing, or simply enjoy our warm pool. 
+			With adventures and activities perfect for kids of all ages. Pine Lake Resort is truly a Paradise for families! Imagine a family vacation, 
+			and smiles at every turn. We offer a great selection of activities to keep everyone entertain for a perfect family gateway. After a long 
+			day of fun relax and enjoy a great meal at any of our restaurants.
+			</p>
+		</div>
+<!-- picture display-->
+		<div class="wrapper" >
+			<div >
+				<img class="sidepics" src="image/massage.jpeg" alt="massage">
+			</div>
+			<div >
+				<img class="sidepics" src="image/yoga.jpg" alt="yoga on a rock ">
+			</div>
+			<div >
+				<img  class="sidepics" src="image/wedding.jpg" alt="married couple">
+			</div>
+		</div>
+	</main>
+	</div>
+
+	<footer>
+		<p>9772 Pine Ridge Road, PineLake,CO<br>
+			Email: <a href="mailto:Info@pineridge.com">Info@pineridge.com</a><br>
+			Call Us: <a href="888-259-5959">888-259-5959</a></p>
+
+		<p>Copyright &copy; 2020 Pine Lake Resort<br>
+	Gregory Saysset</p>
+	</footer>
+
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
+

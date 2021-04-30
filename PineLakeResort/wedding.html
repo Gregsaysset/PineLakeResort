@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Pine Lake Resort</title>
+	<link rel="stylesheet" type="text/css" href="resort.css">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1><a href="index.html"> Pine Lake Resort</a></h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="index.html"> Home</a></li>
+			<li><a href="cabin.html"> Cabins</a></li>
+			<li><a href="dining.html"> Dining</a></li>
+			<li><a href="spa.html"> Spa</a></li>
+			<li><a href="wedding.html">Wedding</a></li>
+			<li><a href="activities.html"> Activities</a></li>
+			<li><a href="reservations.html"> Reservations</a>	</li>
+		</ul>
+	</nav>
+	
+
+  <!-- Full-width images with number and caption text -->
+  <div>
+      
+    <img class="mainpic" src="image/wedding11.jpg" alt="married couple" style="width:100%" >
+
+    
+  </div>
+
+	
+<main>
+
+	<div class="pictext">
+        <h2>Wedding Event</h2>
+     
+        <p>
+            Whether you envision a celebration that is traditional or trendsetting, festive or formal,
+            intimate or grand scale.<br> Pine Lake Resort will capture your down the aisle style. Pine Lake Resort
+            features breathtaking lake views and luxuriously appointed indoor and outdoor wedding venues.
+            Your vision is our vow. <br>Our professional event planning staff will ensure every detail of your wedding is flawless.
+             From intimate to lavish, Pine Lake Resort offers an array of comprehensive wedding packages perfect for traditional weddings
+            or destination weddings. 
+        </p>
+         
+        <h4>Contact us at<a href="888-259-5962"> 888-259-5962</a> to begin planning.</h4>
+       
+    </div>
+ 
+ 
+  
+
+
+    
+    <div class="slideshow">
+
+    <div class="pics">
+      <img src="image/wedding5.jpg" alt="married on the lake" style="width:100%">
+    </div>
+    
+    <div class="pics">
+      <img src="image/wedding1.jpg" alt="ceremony under the arch" style="width:100%">  
+    </div>
+    <div class="pics">
+      <img src="image/wedding.jpg" alt="couple kissing" style="width:100%">
+     </div>
+    <div class="pics">
+      <img src="image/wedding6.jpg" alt="you may kiss the bride" style="width:100%">
+      
+    </div>
+    <div class="pics">
+      <img src="image/wedding12.jpg" alt="isle" style="width:100%">
+     
+    </div>
+    <div class="pics">
+      <img src="image/wedding7.jpg" alt="aerial picture" style="width:100%">
+      
+    </div>
+    <div class="pics">
+      <img src="image/wedding9.jpg" alt="kissing on the dock" style="width:100%">
+      
+    </div>
+    <div class="pics">
+      <img src="image/wedding8.jpg" alt="room" style="width:100%">
+      
+    </div>
+    <div class="pics">
+      <img src="image/wedding10.jpg" alt="table" style="width:100%">
+     
+    </div>
+    <!--prev and next button-->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    </div>
+    <br>
+    <!--small pics-->
+    <div style="text-align:center">
+      <span class="small" onclick="currentSlide(1)"><img src="image/wedding5.jpg" alt="married on the lake" ></span> 
+      <span class="small" onclick="currentSlide(2)"><img src="image/wedding1.jpg" alt="ceremony under the arch"></span> 
+      <span class="small" onclick="currentSlide(3)"><img src="image/wedding.jpg" alt="couple kissing"></span> 
+      <span class="small" onclick="currentSlide(4)"><img src="image/wedding6.jpg" alt="you may kiss the bride"></span> 
+      <span class="small" onclick="currentSlide(5)"><img src="image/wedding12.jpg" alt="down the isle"></span> 
+      <span class="small" onclick="currentSlide(6)"><img src="image/wedding7.jpg" alt="aerial picture"></span> 
+      <span class="small" onclick="currentSlide(7)"><img src="image/wedding9.jpg" alt="kissing on the dock"></span> 
+      <span class="small" onclick="currentSlide(8)"><img src="image/wedding8.jpg" alt="dining room" ></span> 
+      <span class="small" onclick="currentSlide(9)"><img src="image/wedding10.jpg" alt="table presentation"></span> 
+    </div>
+    
+	</main>
+	<footer>
+		<p>9772 Pine Ridge Road, PineLake,CO<br>
+			Email: <a href="mailto:Info@pineridge.com">Info@pineridge.com</a><br>
+			Call Us: <a href="888-259-5959">888-259-5959</a></p>
+
+		<p>Copyright &copy; 2020 Pine Lake Resort<br>
+	Gregory Saysset</p>
+	</footer>
+
+  <script>
+     var slideIndex = 1;
+      showSlides(slideIndex);
+
+      //button control
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      //small control
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      //slideshow
+      function showSlides(n) {
+      //variables
+        var pics = document.getElementsByClassName("pics");
+        var small = document.getElementsByClassName("small");
+        if (n > pics.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = pics.length}
+        for (i = 0; i < pics.length; i++) {
+      pics[i].style.display = "none";  
+        }
+
+        //small pics
+        for (i = 0; i < small.length; i++) {
+            small[i].className = small[i].className.replace(" active", "");
+        }
+        pics[slideIndex-1].style.display = "block";  
+        small[slideIndex-1].className += " active";
+      }
+   </script>
+</body>
+
+
+
+</html>

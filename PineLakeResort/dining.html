@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Pine Lake Resort</title>
+	<link rel="stylesheet" type="text/css" href="resort.css">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1><a href="index.html"> Pine Lake Resort</a></h1>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="index.html"> Home</a></li>
+			<li><a href="cabin.html"> Cabins</a></li>
+			<li><a href="dining.html"> Dining</a></li>
+			<li><a href="spa.html"> Spa</a></li>
+			<li><a href="wedding.html">Wedding</a></li>
+			<li><a href="activities.html"> Activities</a></li>
+			<li><a href="reservations.html"> Reservations</a></li>
+		</ul>
+	</nav>
+	
+
+  <!-- Full-width images with number and caption text -->
+  <div>
+      
+    <img class="mainpic" src="image/dining2.jpg" alt="Chef plating a dish" style="width:100%" >
+
+    
+  </div>
+
+	
+<main>
+
+	<div class="pictext">
+        <h2 class="tittle">Bistro Les Amis</h2>
+     
+        <p>
+            Our lakefront dining room & deck provide breathtaking views of Pine Lake.  Each evening, sunset is framed perfectly from your table.<br>
+            Embracing the rich Pine Lake surroundings, our award-winning cuisine tastefully brings together farm fresh ingredients and local product bought daily, direct from the producer.<br>
+            With emphasis placed on local & sustainable products, Chef will forage the forest for mushrooms or visit the area farms, taking great care in selecting his produce, to bring a truly distinctive experience to your plate.
+        </p>
+        
+        <h3>Menus</h3>
+        <ul class="menu">
+            <li><a href="image/breakfast.pdf">Breakfast Menu</a></li>
+            <li><a href="image/lunch.pdf">Lunch Menu</a></li>
+            <li><a href="image/dinner.pdf">Dinner Menu</a></li>
+        </ul>
+        <div class="center">
+          <h4>Call Restaurant for Reservation:<br><a href="888-259-5962"> 888-259-5962</a></h4>
+        </div>
+    </div>
+ 
+ 
+  
+
+
+    
+    <div class="slideshow">
+
+    <div class="pics">
+      <img src="image/dining5.jpg" alt="restaurant from outside" style="width:100%">
+    </div>
+    
+    <div class="pics">
+      <img src="image/dining3.jpg" alt="lounge chair on the patio" style="width:100%">  
+    </div>
+    <div class="pics">
+      <img src="image/dining4.jpg" alt="romantic couple dining" style="width:100%">
+     </div>
+    <div class="pics">
+      <img src="image/dining11.jpg" alt="server carrying plate" style="width:100%">
+      
+    </div>
+    <div class="pics">
+      <img src="image/dining6.jpg" alt="dining room" style="width:100%">
+     
+    </div>
+    <div class="pics">
+      <img src="image/dining7.jpg" alt="Filet mignon" style="width:100%">
+      
+    </div>
+    <div class="pics">
+      <img src="image/dining8.jpg" alt="chef final touch" style="width:100%">
+      
+    </div>
+    <div class="pics">
+      <img src="image/dining9.jpg" alt="tapas and drink" style="width:100%">
+      
+    </div>
+    <div class="pics">
+      <img src="image/dining10.jpg" alt="table setting" style="width:100%">
+     
+    </div>
+    <!--prev and next button-->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    </div>
+    <br>
+    <!--small pics-->
+    <div style="text-align:center">
+      <span class="small" onclick="currentSlide(1)"><img src="image/dining5.jpg" alt="restaurant from outside" ></span> 
+      <span class="small" onclick="currentSlide(2)"><img src="image/dining3.jpg" alt="lounge chair on the patio"></span> 
+      <span class="small" onclick="currentSlide(3)"><img src="image/dining4.jpg" alt="romantic couple dining"></span> 
+      <span class="small" onclick="currentSlide(4)"><img src="image/dining11.jpg" alt="server carrying plate" ></span> 
+      <span class="small" onclick="currentSlide(5)"><img src="image/dining6.jpg" alt="dining room"></span> 
+      <span class="small" onclick="currentSlide(6)"><img src="image/dining7.jpg" alt="Filet mignon"></span> 
+      <span class="small" onclick="currentSlide(7)"><img src="image/dining8.jpg" alt="chef final touch"></span> 
+      <span class="small" onclick="currentSlide(8)"><img src="image/dining9.jpg" alt="tapas and drink" ></span> 
+      <span class="small" onclick="currentSlide(9)"><img src="image/dining10.jpg" alt="table setting"></span> 
+    </div>
+    
+	</main>
+	<footer>
+		<p>9772 Pine Ridge Road, PineLake,CO<br>
+			Email: <a href="mailto:Info@pineridge.com">Info@pineridge.com</a><br>
+			Call Us: <a href="888-259-5959">888-259-5959</a></p>
+
+		<p>Copyright &copy; 2020 Pine Lake Resort<br>
+	Gregory Saysset</p>
+	</footer>
+
+  <script>
+      var slideIndex = 1;
+    showSlides(slideIndex);
+
+    //button control
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    //small control
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+    //slideshow
+    function showSlides(n) {
+    //variables
+    var pics = document.getElementsByClassName("pics");
+    var small = document.getElementsByClassName("small");
+    if (n > pics.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = pics.length}
+    for (i = 0; i < pics.length; i++) {
+      pics[i].style.display = "none";  
+    }
+
+    //small pics
+    for (i = 0; i < small.length; i++) {
+      small[i].className = small[i].className.replace(" active", "");
+    }
+    pics[slideIndex-1].style.display = "block";  
+    small[slideIndex-1].className += " active";
+    }
+
+  </script>
+
+
+</body>
+</html> 
+
